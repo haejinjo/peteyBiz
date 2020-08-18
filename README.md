@@ -26,7 +26,8 @@ To help the love of my life out with very cool data analysis.
     00d2e06e75391fb0e46d0b90655f40ee83f221a2,Mollie,Reese
     58641dba0625ab5617f0f76b255eb3142a7935f9,Hettie,Ward
     9d61ed249f87685c9e11f096d0c3a799ca0ea48b,Dorothy,Butler
-    7d6ed67d85ee64fda624116bec9ae7da9eb64d0c,Leroy,Boone 8c506576c593141f5fccdf8aaec144a6760a1680,Vincent,Singleton
+    7d6ed67d85ee64fda624116bec9ae7da9eb64d0c,Leroy,Boone
+    8c506576c593141f5fccdf8aaec144a6760a1680,Vincent,Singleton
     7feef75ac3c189116e69c5dd28e35ea931c84b8b,Patrick,Mack
     c63e64513775e93af81ab3839a809d5e8ff1ca77,Francisco,Waters
     3edb4823e792d621215e335715a03cadff8ab3a9,Ernest,Sims
@@ -123,6 +124,6 @@ To help the love of my life out with very cool data analysis.
     - This new column should represent the number of instances of the record immediately to its left
 
 4. TODO: Command line inputs using `argparse`
-  - Path to csv input file
-  - Path to csv output file (same directory by default)
-  - Column name in question
+    - Path to csv input file
+    - Path to csv output file (same directory by default)
+    - Column name in question
