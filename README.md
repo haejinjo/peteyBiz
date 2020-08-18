@@ -170,3 +170,4 @@ python addRowCounts.py {-h | --help}
 4. Enable command line inputs using `argparse` (with auxiliary use of `os` and `sys`) for that sweet UX
     - Path to csv input file
     - Column name in question
+    - OPTIONAL: Boolean flag that enables descending sort based on first: named column and second: count
