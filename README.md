@@ -1,23 +1,48 @@
 ## Purpose
 To help the love of my life out with very cool data analysis.
 
+## You will need
+  - a very basic fluency in navigating the command line
+  - [Python](https://www.python.org/downloads/) (this tool was tested on Python version 2.7.16)
+  - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#:~:text=Before%20you%20start%20using%20Git,code%20and%20compile%20it%20yourself.) (usually pre-installed for Mac these days, but you will be prompted to install if not)
+
 ## How to Use
-1. Install [python](https://www.python.org/downloads/) (this tool was tested on Python version 2.7.16)
-2. Open a command line interface using an application of your choice (e.g. Terminal or PuTTY)
-3. Navigate to the directory that contains your CSV file(s)
+1. Open a command line interface using your application of choice (e.g. Terminal or PuTTY)
+2. Navigate to the directory that contains your CSV file(s)
     - 🤷‍♂️ Don't know how? You won't need to know much for this tool, so [check out a basic tutorial](https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855)!
-    - **Hint:** `ls`, `cd`, and paths are your friends.
-4. Run the following command using `python`:
-    <pre>python addRowCounts.py -i <i>PATH TO INPUT CSV FILE</i> -c <i>NAME OF COLUMN TO ADD COUNTS FOR</i></pre>
-    - **Note on `-i`:** Since you are already in the directory where your file lives, you can just type the filename itself as an argument
+    - **Hint:** `ls`, `cd`, and relative paths are your friends.
+3. Clone this repository (repo, for short) once you've made it to your directory containing the relevant CSV file, like so:
+    ```
+    git clone https://github.com/haejinjo/peteyBiz.git
+    ```
+    - If you `ls`, you will notice that running this `git` command created a directory that wasn't there before! Let's look into it!
+4. Navigate into the newly generated repo directory
+    ```
+    cd peteyBiz
+    ```
+5. Once in the repo directory, copy-paste your CSV file from this cloned repo's parent directory like so:
+    ```
+    cp ../yourFilenameShouldBeHere.csv .
+    ```
+    - Notice that the `cp` command takes two arguments: A source and a destination filepath.
+    - As you might've discovered, `..` means the previous or parent directory and `.` means the current directory, the latter of which serves as the "destination" in this case.
+6. Run my program using the `python` command:
+    <pre>python addRowCounts.py -i <i>INPUT CSV FILE</i> -c <i>RELEVANT COLUMN NAME</i></pre>
+    - **Note on `-i`:** Since you are already in the directory where a copy of your file lives, you can just type the filename itself as an argument
       - Example: `python addRowCounts.py -i someDataset.csv -c MAIDEN_NAMES`
       - Normally, you'd have to write out a relative path
     - **Note on `-c`:** Make sure you reproduce the *exact* name of the column whose counts you want inserted as a new column.
     - **Warning:** If you run this command multiple times on the same input CSV file, the output file will be **overwritten**.
-5. If you ever forget what the program does or takes as inputs just run the following command:
-    ```
-    python addRowCounts.py {-h | --help}
-    ```
+7. If you `ls`, you should now see a CSV file ending in "_counts" that wasn't there before. 👋💩
+
+<br />
+
+🆘 Remember, if you ever forget what the program does or how it works, just run the following command:
+```
+python addRowCounts.py {-h | --help}
+```
+<br />
+
 ## Development Process
 
 1. Create dummy CSV file data with 100 records based on what I glanced at on Petey's work using [this nifty tool](https://www.convertcsv.com/generate-test-data.htm), given the following inputs:
@@ -137,7 +162,9 @@ To help the love of my life out with very cool data analysis.
     - Mollie should appear in 6 records
     - Patrick should appear in 8 records
 
-3. Read from an input file and write the data from that input file with 1 new column inserted, using the `csv` Python package, 
+3. Read and process data from an input file using `csv` Python package.
+
+4. Write the data from the input file with 1 new column inserted, using `csv` Python package.
     - This new column should represent the number of instances of the record immediately to its left
 
 4. Enable command line inputs using `argparse` (with auxiliary use of `os` and `sys`) for that sweet UX
