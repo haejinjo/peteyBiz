@@ -1,11 +1,30 @@
 import csv
 # Note: A row in csv.reader = an array of strings with NUM_COLUMNS values
+import argparse
+import os
+import sys
+
+parser = argparse.ArgumentParser(description='Generate a copy of the given CSV file with a new column of counts data inserted')
+parser.add_argument('-i',
+                     type=str,
+                     help='the path to your csv file',
+                     required=True)
+parser.add_argument('-c',
+                     type=str,
+                     help='the exact case-sensitive name of the column you want to produce counts for',
+                     required=True)
+args = parser.parse_args()
 
 # Paths default to assuming your files are in same directory as script
-INPUT_PATH = 'peteyTest2.csv'
+INPUT_PATH = args.i
 OUTPUT_PATH = INPUT_PATH.split('.')[0] + '_counted.csv'
+
+if not os.path.isfile(INPUT_PATH):
+  print('Error: The file specified for `-i` does not exist in this directory')
+  sys.exit()
+
 # Name of attribute you want counted
-ATTR_NAME = 'not_hashed_user_id'
+ATTR_NAME = args.c
 # Column number of the relevant attribute
 ATTR_INDEX = -1
 # CSV File Delimiter
