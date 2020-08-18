@@ -4,8 +4,10 @@ To help the love of my life out with very cool data analysis.
 ## How to Use
 1. Install [python](https://www.python.org/downloads/) (this tool was tested on Python version 2.7.16)
 2. Open a command line interface using an application of your choice (e.g. Terminal or PuTTY)
-3. Navigate to the directory that contains your CSV file(s) (Don't know how? You won't need to know much for this tool, so [check out a basic tutorial](https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855)!
-4. Run the following command
+3. Navigate to the directory that contains your CSV file(s)
+    - 🤷‍♂️ Don't know how? You won't need to know much for this tool, so [check out a basic tutorial](https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855)!
+    - **Hint:** `ls`, `cd`, and paths are your friends.
+4. Run the following command using `python`:
     <pre>python addRowCounts.py -i <i>PATH TO INPUT CSV FILE</i> -c <i>NAME OF COLUMN TO ADD COUNTS FOR</i></pre>
     - **Note on `-i`:** Since you are already in the directory where your file lives, you can just type the filename itself as an argument
       - Example: `python addRowCounts.py -i someDataset.csv -c MAIDEN_NAMES`
