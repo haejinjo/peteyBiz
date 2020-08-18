@@ -54,7 +54,7 @@ with open(INPUT_PATH) as in_file, open(OUTPUT_PATH, 'w') as out_file:
   # Process and write new header row
   header_row = next(csv_reader)
   header_row.insert(ATTR_INDEX+1, 'count')
-  csv_writer.writerow(row)
+  csv_writer.writerow(header_row)
 
 
   # LOOP: Process and write new data rows (with count column)
