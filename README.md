@@ -33,7 +33,7 @@ To help the love of my life out with very cool data analysis.
       - Normally, you'd have to write out a relative path
     - **Note on `-c`:** Make sure you reproduce the *exact* name of the column whose counts you want inserted as a new column.
     - **Warning:** If you run this command multiple times on the same input CSV file, the output file will be **overwritten**.
-7. If you `ls`, you should now see a CSV file ending in "_counts" that wasn't there before. 👋💩
+7. If you `ls`, you should now see a CSV file ending in "_counted" that wasn't there before. 👋💩
 
 <br />
 
