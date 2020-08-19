@@ -27,7 +27,7 @@ To help the love of my life out with very cool data analysis.
     - Notice that the `cp` command takes two arguments: A source and a destination filepath.
     - As you might've discovered, `..` means the previous or parent directory and `.` means the current directory, the latter of which serves as the "destination" in this case.
 6. Run my program using the `python` command:
-    <pre>python addRowCounts.py -i <i>INPUT CSV FILE</i> -c <i>RELEVANT COLUMN NAME</i></pre>
+    <pre>python addRowCounts.py -i <i>INPUT CSV FILE</i> -c <i>RELEVANT COLUMN NAME</i> [--sort]</pre>
     - **Note on `-i`:** Since you are already in the directory where a copy of your file lives, you can just type the filename itself as an argument
       - Example: `python addRowCounts.py -i someDataset.csv -c MAIDEN_NAMES`
       - Normally, you'd have to write out a relative path
